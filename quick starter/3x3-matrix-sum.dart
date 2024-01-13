@@ -1,36 +1,67 @@
+
 import 'dart:io';
 
-void main()
-{
-  List matrix1=[[1,2,3],[4,5,6],[7,8,9]];
-  var f;
-  // stdout.write('Enter dimension of 1st matrix :');
-  // int dimension = int.parse(stdin.readLineSync()!);
+void main() {
+  List matrix1 = [[]];
+  List matrix2 = [[]];
+  int num, n;
 
-  // for(int i=0; i<dimension; i++)
-  // {
-  //   for(int j=0; j<dimension; j++)
-  //   {
-  //     stdout.write('matrix[$i][$j] : ');
-      
-  //     matrix1.add(int.parse(stdin.readLineSync()!));
-  //   }
-  // }
-   List matrix2=[[1,2,3],[4,5,6],[7,8,9]];
- 
+  stdout.write("Enter the number : ");
+  n = int.parse(stdin.readLineSync()!);
 
-  // for(int i=0; i<dimension; i++)
-  // {
-  //   for(int j=0; j<dimension; j++)
-  //   {
-  //     stdout.write('matrix[$i][$j] : ');
-      
-  //     matrix2.add(int.parse(stdin.readLineSync()!));
-      
-  //   }
-  // }
- var temp=f.addition(matrix1,matrix2);
- print(temp);
 
+  for (int i = 0; i < n; i++) {
+    matrix1.add([]);
+  }
+
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      stdout.write("Enter value of Element[$i][$j] : ");
+      num = int.parse(stdin.readLineSync()!);
+      matrix1[i].add(num);
+    }
+  }
+
+  print("\n enter 2nd matrix\n");
+
+  for (int i = 0; i < n; i++) {
+    matrix2.add([]);
+  }
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      stdout.write("Enter value of Element[$i][$j] : ");
+      num = int.parse(stdin.readLineSync()!);
+      matrix2[i].add(num);
+    }
+  }
+
+
+  print("Matrix:");
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      stdout.write("${matrix1[i][j]} ");
+    }
+    print(""); 
+  }
+
+  print("Matrix 2 :");
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      stdout.write("${matrix2[i][j]} ");
+    }
+    print(""); 
+  }
+
+  print("Adding matrix");
+
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      stdout.write("${matrix1[i][j] + matrix2[i][j]} ");
+    }
+    print(""); 
+  }
 
 }
