@@ -44,6 +44,7 @@ void main()
 
    for(int i=0; i<3; i++)
    {  
-   Sobj[0].get();
+   Sobj[i].get();
+   print("\n");
    }
 }
