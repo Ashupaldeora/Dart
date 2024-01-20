@@ -10,17 +10,20 @@ void main() {
     int reverseGap = rows;
     loop = i;
     for (int s = 1; s < i; s++) {
-      stdout.write("--");
+      stdout.write(" - ");
     }
 
-    for (int j = loop; j < (rows*2) - l; j++) {
+    for (int j = loop; j < (rows * 2) - l; j++) {
+      if (gap >= 1 && gap <= 9) {
+        stdout.write(" ");
+      }
       if (loop > rows) {
         gap += reverseGap;
         stdout.write('$gap ');
         reverseGap--;
       } else {
         stdout.write('$gap ');
-        if (j <= rows-1) {
+        if (j <= rows - 1) {
           gap += j;
         }
       }
