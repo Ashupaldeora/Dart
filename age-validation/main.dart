@@ -61,10 +61,6 @@ class DateValidate extends AgeValidate {
   }
 }
 
-class Leap extends DateValidate {
-
-}
-
 int main() {
   
   int ageincreament = 0;
