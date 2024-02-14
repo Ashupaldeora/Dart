@@ -24,7 +24,6 @@ class customer {
 }
 
 class Product {
-  Map tempmap = {};
   List productlist = [
     {
       'productid': 110,
@@ -73,6 +72,7 @@ class Product {
   List cart = [];
 
   List Showproducts() {
+    Map tempmap = {};
     int custchoice = 0;
     int quantityofproduct = 0;
     late int tempindex;
